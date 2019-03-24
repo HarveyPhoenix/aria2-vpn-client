@@ -13,7 +13,6 @@ RUN	apt-get update -y && \
     rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 RUN adduser --disabled-password --quiet apprunner
-USER apprunner
 RUN mkdir -p /home/apprunner/running
 ADD ./start.sh /home/apprunner/running/
 WORKDIR /home/apprunner/running/
